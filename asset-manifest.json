@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/PixelGarden/static/css/main.73efbf52.chunk.css",
+    "main.js": "/PixelGarden/static/js/main.02bcf47e.chunk.js",
+    "main.js.map": "/PixelGarden/static/js/main.02bcf47e.chunk.js.map",
+    "runtime-main.js": "/PixelGarden/static/js/runtime-main.649734f4.js",
+    "runtime-main.js.map": "/PixelGarden/static/js/runtime-main.649734f4.js.map",
+    "static/js/2.fb3ef508.chunk.js": "/PixelGarden/static/js/2.fb3ef508.chunk.js",
+    "static/js/2.fb3ef508.chunk.js.map": "/PixelGarden/static/js/2.fb3ef508.chunk.js.map",
+    "static/js/3.99ee57af.chunk.js": "/PixelGarden/static/js/3.99ee57af.chunk.js",
+    "static/js/3.99ee57af.chunk.js.map": "/PixelGarden/static/js/3.99ee57af.chunk.js.map",
+    "index.html": "/PixelGarden/index.html",
+    "static/css/main.73efbf52.chunk.css.map": "/PixelGarden/static/css/main.73efbf52.chunk.css.map",
+    "static/js/2.fb3ef508.chunk.js.LICENSE.txt": "/PixelGarden/static/js/2.fb3ef508.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/PixelGarden/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.649734f4.js",
+    "static/js/2.fb3ef508.chunk.js",
+    "static/css/main.73efbf52.chunk.css",
+    "static/js/main.02bcf47e.chunk.js"
+  ]
+}
