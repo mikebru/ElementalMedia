@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import HelloWorld from './HelloWorld';
+import ResponsiveEmbed from 'react-responsive-embed'
+import { Connector } from 'react-mqtt';
+import {subscribe} from 'react-mqtt';
+import _MessageContainer from './MessageContainer.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const MessageContainer = subscribe({topic: '@near/demo'})(_MessageContainer);
+
+class App extends Component {
+  render() {
+    return (
+      <Connector mqttProps="wss://test.mosquitto.org:8081">
+        <div className="App"> 
+          <HelloWorld name="jim"/> 
+          <HelloWorld name="bill"/> 
+
+          <ResponsiveEmbed src='https://obs.ninja/?view=mikebru' ratio='16:9' />
+
+          <MessageContainer/>
+        </div>
+      </Connector>
+      );
+    }
 }
 
 export default App;
