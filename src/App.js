@@ -6,7 +6,7 @@ import { Connector } from 'react-mqtt';
 import {subscribe} from 'react-mqtt';
 import _MessageContainer from './MessageContainer.js';
 
-const MessageContainer = subscribe({topic: '@near/demo'})(_MessageContainer);
+const MessageContainer = subscribe({topic: 'pixelGarden'})(_MessageContainer);
 
 class App extends Component {
   render() {
@@ -14,11 +14,11 @@ class App extends Component {
       <Connector mqttProps="wss://test.mosquitto.org:8081">
         <div className="App"> 
           <HelloWorld name="jim"/> 
-          <HelloWorld name="bill"/> 
 
-          <ResponsiveEmbed src='https://obs.ninja/?view=mikebru' ratio='16:9' />
+          <ResponsiveEmbed src='https://obs.ninja/?view=mikebru' allowFullScreen ratio='16:9'/>
 
           <MessageContainer/>
+          <br/> <br/> <br/>
         </div>
       </Connector>
       );

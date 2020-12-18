@@ -8,7 +8,7 @@ export default class MessageContainer extends React.Component {
 
   addMessage(message){
     const {mqtt} = this.props;
-    mqtt.publish('@near/demo', message);
+    mqtt.publish('pixelGarden', message);
   }
 
   render(){
