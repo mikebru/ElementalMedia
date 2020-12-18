@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/PixelGarden/static/css/main.b808cf8b.chunk.css",
-    "main.js": "/PixelGarden/static/js/main.a04b7c74.chunk.js",
-    "main.js.map": "/PixelGarden/static/js/main.a04b7c74.chunk.js.map",
+    "main.js": "/PixelGarden/static/js/main.6d442e91.chunk.js",
+    "main.js.map": "/PixelGarden/static/js/main.6d442e91.chunk.js.map",
     "runtime-main.js": "/PixelGarden/static/js/runtime-main.0bf81e65.js",
     "runtime-main.js.map": "/PixelGarden/static/js/runtime-main.0bf81e65.js.map",
     "static/js/2.32eacc04.chunk.js": "/PixelGarden/static/js/2.32eacc04.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.0bf81e65.js",
     "static/js/2.32eacc04.chunk.js",
     "static/css/main.b808cf8b.chunk.css",
-    "static/js/main.a04b7c74.chunk.js"
+    "static/js/main.6d442e91.chunk.js"
   ]
 }
