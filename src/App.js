@@ -8,10 +8,11 @@ import Contact from './components/Contact';
 import Error from './components/Error';
 import Navigation from './components/Navigation';
 
-import ResponsiveEmbed from 'react-responsive-embed'
 import { Connector } from 'react-mqtt';
 import {subscribe} from 'react-mqtt';
 import _MessageContainer from './components/MessageContainer.js';
+
+import ResponsiveEmbed from 'react-responsive-embed'
 
 const MessageContainer = subscribe({topic: 'pixelGarden'})(_MessageContainer);
 
@@ -24,15 +25,12 @@ class App extends Component {
 
             <Navigation />
               <Switch>
-                <Route path="/" component={Home} exact/>
-                <Route path="/about" component={About}/>
-                <Route path="/contact" component={Contact}/>
+                <Route path="/PixelGarden" component={Home} exact/>
+                <Route path="/PixelGarden/about" component={About}/>
+                <Route path="/PixelGarden/contact" component={Contact}/>
                 <Route component={Error}/>
               </Switch>
 
-
-            <ResponsiveEmbed src='https://obs.ninja/?view=mikebru' allowFullScreen ratio='16:9'/>
-            <MessageContainer/>
           </div>
         </Connector>
       </BrowserRouter>

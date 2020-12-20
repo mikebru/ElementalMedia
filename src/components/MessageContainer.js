@@ -1,7 +1,7 @@
 import React from 'react';
 
-import MessageList from './MessageList';
-import MessageForm from './MessageForm';
+import MessageList from '../components/MessageList';
+import MessageForm from '../components/MessageForm';
 
 
 export default class MessageContainer extends React.Component {

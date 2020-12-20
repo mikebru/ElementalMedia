@@ -5,9 +5,9 @@ import { NavLink } from 'react-router-dom';
 const Navigation = () => {
     return (
        <div>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/PixelGarden">Home</NavLink>
+          <NavLink to="/PixelGarden/about">About</NavLink>
+          <NavLink to="/PixelGarden/contact">Contact</NavLink>
        </div>
     );
 }
