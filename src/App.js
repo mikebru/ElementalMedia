@@ -10,11 +10,8 @@ import Navigation from './components/Navigation';
 
 import { Connector } from 'react-mqtt';
 import {subscribe} from 'react-mqtt';
-import _MessageContainer from './components/MessageContainer.js';
 
 import ResponsiveEmbed from 'react-responsive-embed'
-
-const MessageContainer = subscribe({topic: 'pixelGarden'})(_MessageContainer);
 
 class App extends Component {
   render() {
