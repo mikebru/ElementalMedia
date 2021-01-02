@@ -9,7 +9,7 @@ export default class CameraControls extends React.Component {
  
     addMessage(message){
         const {mqtt} = this.props;
-        mqtt.publish('pixelGarden', "Camera/Zoom/" + String(message));
+        mqtt.publish('pixelGarden', String(message));
       }
 
 
