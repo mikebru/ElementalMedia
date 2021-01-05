@@ -97,12 +97,12 @@
 
                                 <label for="PanBlock">Pan</label>
                                 <div class="d-table-cell" style="vertical-align: middle;" id="PanBlock">
-                                    <input type="range" min="1" max="100" value="50" class="slider" id="sliderPan">
+                                    <input type="range" min="-90" max="90" value="0" step="1" class="slider" id="sliderPan">
                                 </div>
 
                                 <div class="d-table-cell" style="text-align: center;">
                                     <p>Tilt</p>
-                                    <input type="range" min="1" max="100" value="50" class="vertical" orient="vertical"
+                                    <input type="range" min="-90" max="90" value="0" step="1" class="vertical" orient="vertical"
                                         id="sliderTilt">
                                 </div>
 
@@ -146,7 +146,6 @@
         const renderer = new THREE.WebGLRenderer();
         renderer.setSize( window.innerWidth, window.innerHeight );
         document.body.appendChild( renderer.domElement );
-
 
         const geometry = new THREE.BoxGeometry();
         const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
