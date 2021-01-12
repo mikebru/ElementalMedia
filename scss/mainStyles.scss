@@ -11,8 +11,8 @@ body{
 
 
 .container {
-    max-width: 100%;
-    padding-top: 2.5%;
+    max-width: 95%;
+    padding-top: 0.0%;
 }
 
 .video_wrapper {
@@ -31,6 +31,10 @@ iframe{
 .audience_wrapper {
     position: relative;
     padding-bottom: 116.50%; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */ 
+}
+
+.control_wrapper {
+    background-color: rgba(0, 0, 0, 0.76);
 }
 
 
