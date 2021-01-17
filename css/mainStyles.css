@@ -9,7 +9,7 @@ body {
 
 .container {
   max-width: 95%;
-  padding-top: 0.0%; }
+  padding-top: 2.5%; }
 
 .video_wrapper {
   position: relative;
@@ -30,6 +30,30 @@ iframe {
 
 .control_wrapper {
   background-color: rgba(0, 0, 0, 0.76); }
+
+.icon-buttons {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: auto;
+  width: 50%;
+  min-width: 25px; }
+
+a:link, a:visited {
+  color: white;
+  text-align: center;
+  border: 2px solid #008075;
+  border-radius: 10%;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: x-large;
+  font-weight: bold; }
+
+a:hover, a:active {
+  background-color: #008075;
+  color: white; }
 
 * {
   box-sizing: border-box; }
