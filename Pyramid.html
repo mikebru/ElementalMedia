@@ -14,13 +14,22 @@
 </head>
 
 <body onload="Connect()">
-    <div class="navbar_wraper">
+    <div class="navbar_wraper color_layer">
         <!-- will load common navbar with js $().load() method -->
     </div>
-    <section class="home_header">
+    <section class="home_header color_layer">
         <div class="container">
             <!--Main View and Room Select  -->
             <div class="row justify-content-center">
+
+
+                <div class="col-9 border rounded">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://obs.ninja/?view=pyramid&bitrate=5000" allowfullscreen class="second-row"
+                            title="Living Room"></iframe>
+                    </div>
+                </div>
+
 
                 <div class="col-3 border rounded" style="vertical-align: middle;">
 
@@ -38,17 +47,12 @@
 
                 </div>
 
-                <div class="col-9 border rounded">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe src="https://obs.ninja/?view=pyramid&bitrate=5000" allowfullscreen class="second-row"
-                            title="Living Room"></iframe>
-                    </div>
-                </div>
+
             </div>
 
 
             <!--Controls  -->
-            <div class="row justify-content-center" style="padding-top: 0.0%; padding-left: 0%;">
+            <div class="row justify-content-center" style="padding-top: 2.0%; padding-left: 0%;">
 
                 <div class="col-md-8 border rounded control_wrapper">
                     <h5>Scene Controls</h5>
@@ -135,10 +139,6 @@
 
 
     </section>
-
-    <div class="footer_wraper">
-        <!-- will load common footer with js $().load() method -->
-    </div>
 
     <script src="dependencies/js/jquery.min.js"></script>
     <script src="dependencies/js/popper.min.js"></script>
