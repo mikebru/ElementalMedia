@@ -25,7 +25,7 @@
 
                 <div class="col-9 border rounded">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe src="https://obs.ninja/?view=pyramid&bitrate=5000" allowfullscreen class="second-row"
+                        <iframe src="https://obs.ninja/?view=geodesic&bitrate=5000" allowfullscreen class="second-row"
                             title="Living Room"></iframe>
                     </div>
                 </div>
@@ -55,44 +55,50 @@
             <div class="row justify-content-center" style="padding-top: 2.0%; padding-left: 0%;">
 
                 <div class="col-md-8 border rounded control_wrapper">
-                    <h5>Elemental Controls</h5>
+                    <h5>Scene Controls</h5>
                     <div class="col-12 d-table">
                         <div class="d-table-cell" style="text-align: center;">
-                            <div>Intensity: </div>
-                            <div id="Intensity"> 0.5 </div>
-                            <input type="range" min="0.0" max="1.0" value="0.5" class="vertical" step=".01"
-                                orient="vertical" id="sliderIntensity">
+                            <div>Offset: </div>
+                            <div id="Offset"> 0 </div>
+                            <input type="range" min="-1.0" max="1.0" value="0" class="vertical" step=".01"
+                                orient="vertical" id="sliderOffset">
                         </div>
-
-                        <div class="d-table-cell" style="text-align: center;">
-                            <div>Saturation: </div>
-                            <div id="Saturation"> 0.5 </div>
-                            <input type="range" min="0" max="1.0" value=".5" class="vertical" step=".01"
-                                orient="vertical" id="sliderSaturation">
-                        </div>
-
-
-                        <div class="d-table-cell" style="text-align: center;">
-                            <div>Opacity: </div>
-                            <div id="Opacity"> 1 </div>
-                            <input type="range" min="0.0" max="1.0" value="1" class="vertical" step=".01"
-                                orient="vertical" id="sliderOpacity">
-                        </div>
-
 
                         <div class="d-table-cell" style="text-align: center;">
                             <div>Speed: </div>
-                            <div id="Speed"> 1 </div>
-                            <input type="range" min="0.0" max="10.0" value="1" class="vertical" step=".01"
+                            <div id="Speed"> 0.1 </div>
+                            <input type="range" min="0" max="1.0" value=".1" class="vertical" step=".01"
                                 orient="vertical" id="sliderSpeed">
+                        </div>
+
+                        <div class="d-table-cell" style="text-align: center;">
+                            <div>Period: </div>
+                            <div id="Period"> 1 </div>
+                            <input type="range" min="0.0" max="10.0" value="1" class="vertical" step=".01"
+                                orient="vertical" id="sliderPeriod">
+                        </div>
+
+                        <div class="d-table-cell" style="text-align: center;">
+                            <div>Amplitude: </div>
+                            <div id="Amplitude"> 1 </div>
+                            <input type="range" min="0.0" max="3.0" value="1" class="vertical" step=".01"
+                                orient="vertical" id="sliderAmplitude">
                         </div>
 
 
                         <div class="d-table-cell" style="text-align: center;">
-                            <div>State: </div>
-                            <div id="State"> 1 </div>
+                            <div>Wavetype: </div>
+                            <div id="Wave"> 1 </div>
                             <input type="range" min="0" max="5" value="1" class="vertical" step="1" orient="vertical"
-                                id="sliderState">
+                                id="waveChannel">
+                        </div>
+
+
+                        <div class="d-table-cell" style="text-align: center;">
+                            <div>Channel: </div>
+                            <div id="Channel"> 0 </div>
+                            <input type="range" min="0" max="3" value="0" class="vertical" step="1" orient="vertical"
+                                id="sliderChannel">
                         </div>
 
                     </div>
@@ -152,17 +158,17 @@
         var sliderPan = document.getElementById("sliderPan");
         var sliderTilt = document.getElementById("sliderTilt");
         var sliderZoom = document.getElementById("sliderZoom");
-
-        var sliderIntensity = document.getElementById("sliderIntensity");
-        var sliderSat = document.getElementById("sliderSat");
-        var sliderOpacity = document.getElementById("sliderOpacity");
+        var sliderOffset = document.getElementById("sliderOffset");
         var sliderSpeed = document.getElementById("sliderSpeed");
-        var sliderState = document.getElementById("sliderState");
+        var sliderPeriod = document.getElementById("sliderPeriod");
+        var sliderAmplitude = document.getElementById("sliderAmplitude");
+        var sliderChannel = document.getElementById("sliderChannel");
+        var waveChannel = document.getElementById("waveChannel");
 
 
         sliderPan.oninput = function () {
-            document.getElementById("Pan").innerHTML = this.value;
             PublishMessage("Pan/" + String(this.value), topic);
+            document.getElementById("Pan").innerHTML = this.value;
         }
         sliderTilt.oninput = function () {
             PublishMessage("Tilt/" + String(this.value), topic);
@@ -172,26 +178,29 @@
             PublishMessage("Zoom/" + String(this.value), topic);
             document.getElementById("Zoom").innerHTML = this.value;
         }
-        
-        sliderIntensity.oninput = function () {
-            PublishMessage("Intensity/" + String(this.value), topic);
-            document.getElementById("Intensity").innerHTML = this.value;
-        }
-        sliderSaturation.oninput = function () {
-            PublishMessage("Saturation/" + String(this.value), topic);
-            document.getElementById("Saturation").innerHTML = this.value;
-        }
-        sliderOpacity.oninput = function () {
-            PublishMessage("Opacity/" + String(this.value), topic);
-            document.getElementById("Opacity").innerHTML = this.value;
+        sliderOffset.oninput = function () {
+            PublishMessage("Offset/" + String(this.value), topic);
+            document.getElementById("Offset").innerHTML = this.value;
         }
         sliderSpeed.oninput = function () {
             PublishMessage("Speed/" + String(this.value), topic);
             document.getElementById("Speed").innerHTML = this.value;
         }
-        sliderState.oninput = function () {
-            PublishMessage("State/" + String(this.value), topic);
-            document.getElementById("State").innerHTML = this.value;
+        sliderPeriod.oninput = function () {
+            PublishMessage("Period/" + String(this.value), topic);
+            document.getElementById("Period").innerHTML = this.value;
+        }
+        sliderAmplitude.oninput = function () {
+            PublishMessage("Amplitude/" + String(this.value), topic);
+            document.getElementById("Amplitude").innerHTML = this.value;
+        }
+        sliderChannel.oninput = function () {
+            PublishMessage("Channel/" + String(this.value), topic);
+            document.getElementById("Channel").innerHTML = this.value;
+        }
+        waveChannel.oninput = function () {
+            PublishMessage("Wave/" + String(this.value), topic);
+            document.getElementById("Wave").innerHTML = this.value;
         }
 
     </script>

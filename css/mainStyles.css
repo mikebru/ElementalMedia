@@ -18,10 +18,10 @@ body {
   background-image: url("../img/Backgrounds/Bees.4.gif");
   color: whitesmoke;
   /* Create the parallax scrolling effect */
-  background-size: fill;
+  background-size: 100%;
   background-attachment: fixed;
   background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: repeat; }
 
 .color_layer {
   background-color: rgba(0, 0, 0, 0.5); }
