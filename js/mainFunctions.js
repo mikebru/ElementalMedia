@@ -35,6 +35,39 @@ function Connect() {
     mqtt.connect(options);
 }
 
+// Connect button press
+function ConnectMessage(Topic) {
+    console.log("connect");
+    var cleanSession = true;
+    var useSSL = true;
+    var endpoint = 'mqtt.frankuserinterface.live:8033';
+    var username = "";
+    var password = "";
+    var clientid = "";
+
+    uri = endpoint.split(/:/g);
+    console.log("connecting to " + uri[0] + ":" + parseInt(uri[1]) + " using a " + (cleanSession ? "clean" : "persistant") + " session " + (username ? "with" : "without") + " authentication as " + clientid);
+
+    $('#connection-status').removeClass('badge-disabled badge-success badge-danger badge-warning badge-primary badge-info badge-dark').addClass('badge-info');
+    mqtt = new Paho.MQTT.Client(uri[0], parseInt(uri[1]), clientid);
+    var options = {
+        useSSL: useSSL,
+        timeout: 3,
+        cleanSession: cleanSession
+    };
+    if (username != "")
+        options.userName = username;
+    if (password != "")
+        options.password = password;
+        
+    mqtt.connect(options);
+
+    console.log(Topic);
+
+    setTimeout(() => {PublishMessage("NewConnection", Topic);}, 2000);
+
+}
+
 // Disconnect button press
 function Disconnect() {
     mqtt.disconnect();
