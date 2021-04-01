@@ -61,8 +61,8 @@ iframe {
 a:link, a:visited {
   color: white;
   text-align: center;
-  border-radius: 50%;
-  padding: 10px 30px;
+  border-radius: 0%;
+  padding: 30px 30px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -70,8 +70,7 @@ a:link, a:visited {
   font-weight: bold; }
 
 a:hover, a:active {
-  background-color: rgba(83, 112, 110, 0.459);
-  color: white; }
+  background-color: #636363; }
 
 * {
   box-sizing: border-box; }
@@ -90,7 +89,7 @@ a:hover, a:active {
 
 .roboto_regular_base, .robo_reg_26, .robo_reg_22, .robo_reg_16, .robo_reg_12 {
   font-family: 'Roboto_Regular';
-  color: whitesmoke; }
+  color: #797979; }
 
 .robo_reg_26 {
   font-size: 26px; }
@@ -218,7 +217,7 @@ input.vertical {
       padding-bottom: 0px; } }
 
 .nav-link, .navbar-brand {
-  color: #000; }
+  color: #888888; }
 
 .nav-link.active {
   border-bottom: solid 3px #007BFF; }
@@ -270,7 +269,7 @@ input.vertical {
   position: relative; }
   .foot_sub_form input {
     font-size: 14px;
-    background: #F1F1F1; }
+    background: #5a5a5a; }
   .foot_sub_form .submit_btn {
     border: none;
     background: transparent;
