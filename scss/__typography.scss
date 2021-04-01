@@ -2,7 +2,12 @@
 // roboto regular
 .roboto_regular_base{
     font-family: 'Roboto_Regular';
-    color: rgb(121, 121, 121);
+    color: rgb(255, 255, 255);
+}
+
+.robo_title{
+    @extend .roboto_regular_base;
+    font-size: 48px;
 }
 
 .robo_reg_26{

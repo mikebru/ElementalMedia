@@ -87,9 +87,12 @@ a:hover, a:active {
   font-family: 'Roboto_Bold';
   src: url("/fonts/Roboto-Bold.ttf") format("truetype"); }
 
-.roboto_regular_base, .robo_reg_26, .robo_reg_22, .robo_reg_16, .robo_reg_12 {
+.roboto_regular_base, .robo_title, .robo_reg_26, .robo_reg_22, .robo_reg_16, .robo_reg_12 {
   font-family: 'Roboto_Regular';
-  color: #797979; }
+  color: white; }
+
+.robo_title {
+  font-size: 48px; }
 
 .robo_reg_26 {
   font-size: 26px; }
