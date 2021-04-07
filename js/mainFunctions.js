@@ -36,7 +36,7 @@ function Connect() {
 }
 
 // Connect button press
-function ConnectMessage(Topic) {
+function ConnectMessage(Topic, Message) {
     console.log("connect");
     var cleanSession = true;
     var useSSL = true;
@@ -64,7 +64,7 @@ function ConnectMessage(Topic) {
 
     console.log(Topic);
 
-    setTimeout(() => {PublishMessage("NewConnection", Topic);}, 2000);
+    setTimeout(() => {PublishMessage(Message, Topic);}, 500);
 
 }
 
