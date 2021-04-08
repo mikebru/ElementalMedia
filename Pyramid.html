@@ -13,16 +13,22 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 </head>
 
-<body class="Background_Pyramid" onload="Connect()">
-    <div class="navbar_wraper color_layer">
+<body class="Background_Fire" onload="Connect()">
+    <div class="navbar_wraper">
         <!-- will load common navbar with js $().load() method -->
     </div>
-    <section class="home_header color_layer">
+    <section class="home_header">
         <div class="container">
-            <!--Main View and Room Select  -->
+
+            <!--main title-->
             <div class="row justify-content-center">
+                <h1 class="robo_title">-Fire-</h1>
+            </div>
 
 
+
+            <!--Main View and Room Select  -->
+            <div class="row justify-content-center" style="padding-top: 2.5%;">
                 <div class="col-9 border rounded">
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe title="Pyramid View" src="https://obs.ninja/?view=pyramid&bitrate=3000" allowfullscreen class="second-row"
@@ -52,7 +58,7 @@
 
 
             <!--Controls  -->
-            <div class="row justify-content-center" style="padding-top: 2.0%; padding-left: 0%;">
+            <div class="row justify-content-center color_layer" style="padding-top: 2.0%; padding-left: 0%;">
 
                 <div class="col-md-8 border rounded control_wrapper">
                     <h5>Elemental Controls</h5>
@@ -67,7 +73,7 @@
                         <div class="d-table-cell" style="text-align: center;">
                             <div>Vibrance: </div>
                             <div id="Saturation"> 0.5 </div>
-                            <input type="range" min="0.5" max="1.0" value=".5" class="vertical" step=".01"
+                            <input type="range" min="0.0" max="1.0" value=".5" class="vertical" step=".01"
                                 orient="vertical" id="sliderSaturation">
                         </div>
 
@@ -107,7 +113,7 @@
 
     </section>
 
-    <div class="footer_wraper color_layer">
+    <div class="footer_wraper">
         <!-- will load common navbar with js $().load() method -->
     </div>
 

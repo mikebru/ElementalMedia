@@ -22,8 +22,47 @@ body{
     
 }
 
-.Background_Pyramid{
-    background-image: url("../img/Backgrounds/Bees.4.gif"); 
+.Background_Fire{
+    background-image: url("../img/Backgrounds/Fire_1.jpg"); 
+    color: whitesmoke;
+
+
+    /* Create the parallax scrolling effect */
+    background-size: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+
+.Background_Earth{
+    background-image: url("../img/Backgrounds/Earth.jpg"); 
+    color: whitesmoke;
+
+
+    /* Create the parallax scrolling effect */
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+.Background_Water{
+    background-image: url("../img/Backgrounds/Water_1.jpg"); 
+    color: whitesmoke;
+
+
+    /* Create the parallax scrolling effect */
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+
+
+.Background_Air{
+    background-image: url("../img/Backgrounds/Air.jpg"); 
     color: whitesmoke;
 
 
