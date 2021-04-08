@@ -126,24 +126,12 @@
 
         var topic = "pyramid"
 
-        var sliderPan = document.getElementById("sliderPan");
-        var sliderTilt = document.getElementById("sliderTilt");
-
         var sliderIntensity = document.getElementById("sliderIntensity");
         var sliderSat = document.getElementById("sliderSat");
         var sliderOpacity = document.getElementById("sliderOpacity");
         var sliderSpeed = document.getElementById("sliderSpeed");
         var sliderState = document.getElementById("sliderState");
 
-
-        sliderPan.oninput = function () {
-            document.getElementById("Pan").innerHTML = this.value;
-            PublishMessage("Pan/" + String(this.value), topic);
-        }
-        sliderTilt.oninput = function () {
-            PublishMessage("Tilt/" + String(this.value), topic);
-            document.getElementById("Tilt").innerHTML = this.value;
-        }
         
         sliderIntensity.oninput = function () {
             PublishMessage("Intensity/" + String(this.value), topic);
