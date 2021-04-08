@@ -35,6 +35,7 @@ function Connect() {
     mqtt.connect(options);
 }
 
+
 // Connect button press
 function ConnectMessage(Topic, Message) {
     console.log("connect");
@@ -90,6 +91,9 @@ function PublishMessage(newMessage, newTopic) {
     message.qos = 0;
     message.retained = $('#publish-retain').is(':checked');
     mqtt.send(message);
+
+    console.log(newMessage);
+
 }
 
 // Subscribe button press
