@@ -32,8 +32,8 @@
             <div class="row justify-content-center" style="padding-top: 2.5%;">
                 <div class="col-9 border rounded">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe title="Geo View" src="https://obs.ninja/?view=geo&bitrate=3000" allowfullscreen class="second-row"
-                            ></iframe>
+                        <iframe title="Geo View" src="https://obs.ninja/?view=geo&bitrate=3000" allowfullscreen
+                            class="second-row"></iframe>
                     </div>
                 </div>
 
@@ -47,7 +47,8 @@
                     </div>
 
                     <div class="embed-responsive embed-responsive-4by3">
-                        <iframe title="Join Chat" src="https://obs.ninja/?room=frank_group5&view" allow="camera;microphone">
+                        <iframe title="Join Chat" src="https://obs.ninja/?room=frank_group5&view"
+                            allow="camera;microphone">
                         </iframe>
                     </div>
 
@@ -65,14 +66,14 @@
                     <h5>Elemental Controls</h5>
                     <div class="col-12 d-table">
                         <div class="d-table-cell" style="text-align: center;">
-                            <div>Energy: </div>
+                            <label for="Intensity"> Energy</label>
                             <div id="Intensity"> 0.5 </div>
-                            <input type="range" min="0.0" max="1.0" value="0.5" class="vertical" step=".01"
-                                orient="vertical" id="sliderIntensity">
+                            <input label="Intensity" type="range" min="0.0" max="1.0" value="0.5" class="vertical"
+                                step=".01" orient="vertical" id="sliderIntensity">
                         </div>
 
                         <div class="d-table-cell" style="text-align: center;">
-                            <div>Vibrance: </div>
+                            <label for="Saturation"> Vibrance</label>
                             <div id="Saturation"> 0.5 </div>
                             <input type="range" min="0.0" max="1.0" value=".5" class="vertical" step=".01"
                                 orient="vertical" id="sliderSaturation">
@@ -80,7 +81,7 @@
 
 
                         <div class="d-table-cell" style="text-align: center;">
-                            <div>Presence: </div>
+                            <label for="Opacity"> Presence</label>
                             <div id="Opacity"> 1 </div>
                             <input type="range" min="0.0" max="1.0" value="1" class="vertical" step=".01"
                                 orient="vertical" id="sliderOpacity">
@@ -88,7 +89,7 @@
 
 
                         <div class="d-table-cell" style="text-align: center;">
-                            <div>Resonance: </div>
+                            <label for="Speed"> Resonance</label>
                             <div id="Speed"> 1 </div>
                             <input type="range" min="0.0" max="1.0" value=".2" class="vertical" step=".01"
                                 orient="vertical" id="sliderSpeed">
@@ -96,7 +97,7 @@
 
 
                         <div class="d-table-cell" style="text-align: center;">
-                            <div>Dimension: </div>
+                            <label for="State"> Dimension</label>
                             <div id="State"> 1 </div>
                             <input type="range" min="0" max="3" value="1" class="vertical" step="1" orient="vertical"
                                 id="sliderState">
@@ -108,21 +109,35 @@
                 <div class="col-md-4 border rounded control_wrapper">
                     <h5>Camera Controls</h5>
 
+            
                     <div class="col-10 btn-group-vertical ml-3 mt-3 " style="align-content: center;" role="group">
                         <div class="btn-group">
-                            <button type="button" disabled class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '1';"></button>
-                            <button type="button" style="font-size: 30px; font-weight: bolder;" class="btn btn-outline-primary py-3" onclick="PublishMessage('Tilt/5', 'geo')"> &#8679; </button>
-                            <button type="button" disabled class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '3';"></button>
+                            <button name="disabled" type="button" disabled class="btn btn-outline-secondary py-3"
+                               ></button>
+                            <button name="Tilt Up" type="button" style="font-size: 30px; font-weight: bolder;"
+                                class="btn btn-outline-primary py-3" onclick="PublishMessage('Tilt/5', 'geo')"> &#8679;
+                            </button>
+                            <button name="disabled" type="button" disabled class="btn btn-outline-secondary py-3"
+                                ></button>
                         </div>
                         <div class="btn-group">
-                            <button type="button" style="font-size: 30px; font-weight: bolder;" class="btn btn-outline-primary py-3" onclick="PublishMessage('Pan/-5', 'geo')">&#8678;</button>
-                            <button type="button" disabled class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '5';"></button>
-                            <button type="button" style="font-size: 30px; font-weight: bolder;" class="btn btn-outline-primary py-3" onclick="PublishMessage('Pan/5', 'geo')">&#8680;</button>
+                            <button name="Pan Left" type="button" style="font-size: 30px; font-weight: bolder;"
+                                class="btn btn-outline-primary py-3"
+                                onclick="PublishMessage('Pan/-5', 'geo')">&#8678;</button>
+                            <button name="disabled" type="button" disabled class="btn btn-outline-secondary py-3"
+                                ></button>
+                            <button name="Pan Right" type="button" style="font-size: 30px; font-weight: bolder;"
+                                class="btn btn-outline-primary py-3"
+                                onclick="PublishMessage('Pan/5', 'geo')">&#8680;</button>
                         </div>
                         <div class="btn-group">
-                            <button type="button" disabled class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '7';"></button>
-                            <button type="button" style="font-size: 30px; font-weight: bolder;" class="btn btn-outline-primary py-3" onclick="PublishMessage('Tilt/-5', 'geo')">&#8681;</button>
-                            <button type="button" disabled class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '9';"></button>
+                            <button type="button" disabled class="btn btn-outline-secondary py-3"
+                               ></button>
+                            <button name="Tilt Down" type="button" style="font-size: 30px; font-weight: bolder;"
+                                class="btn btn-outline-primary py-3"
+                                onclick="PublishMessage('Tilt/-5', 'geo')">&#8681;</button>
+                            <button name="disabled" type="button" disabled class="btn btn-outline-secondary py-3"
+                                ></button>
                         </div>
                     </div>
                 </div>
@@ -161,7 +176,7 @@
         var sliderState = document.getElementById("sliderState");
 
 
-        
+
         sliderIntensity.oninput = function () {
             PublishMessage("Intensity/" + String(this.value), topic);
             document.getElementById("Intensity").innerHTML = this.value;
