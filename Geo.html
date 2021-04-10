@@ -40,17 +40,9 @@
 
                 <div class="col-3 border rounded" style="vertical-align: middle;">
 
-                    <div class="embed-responsive embed-responsive-1by1">
-                        <iframe title="Chat View" src="https://obs.ninja/?scene=0&room=frank_group5&roombitrate=500"
-                            allow="camera;microphone">
-                        </iframe>
-                    </div>
-
-                    <div class="embed-responsive embed-responsive-4by3">
-                        <iframe title="Join Chat" src="https://obs.ninja/?room=frank_group5&view"
-                            allow="camera;microphone">
-                        </iframe>
-                    </div>
+                    <iframe title="Chat View" src="https://obs.ninja/?room=frank_group5&roombitrate=500"
+                        allow="camera;microphone">
+                    </iframe>
 
 
                 </div>
@@ -109,35 +101,34 @@
                 <div class="col-md-4 border rounded control_wrapper">
                     <h5>Camera Controls</h5>
 
-            
+
                     <div class="col-10 btn-group-vertical ml-3 mt-3 " style="align-content: center;" role="group">
                         <div class="btn-group">
-                            <button name="disabled" type="button" disabled class="btn btn-outline-secondary py-3"
-                               ></button>
+                            <button name="disabled" type="button" disabled
+                                class="btn btn-outline-secondary py-3"></button>
                             <button name="Tilt Up" type="button" style="font-size: 30px; font-weight: bolder;"
                                 class="btn btn-outline-primary py-3" onclick="PublishMessage('Tilt/5', 'geo')"> &#8679;
                             </button>
-                            <button name="disabled" type="button" disabled class="btn btn-outline-secondary py-3"
-                                ></button>
+                            <button name="disabled" type="button" disabled
+                                class="btn btn-outline-secondary py-3"></button>
                         </div>
                         <div class="btn-group">
                             <button name="Pan Left" type="button" style="font-size: 30px; font-weight: bolder;"
                                 class="btn btn-outline-primary py-3"
                                 onclick="PublishMessage('Pan/-5', 'geo')">&#8678;</button>
-                            <button name="disabled" type="button" disabled class="btn btn-outline-secondary py-3"
-                                ></button>
+                            <button name="disabled" type="button" disabled
+                                class="btn btn-outline-secondary py-3"></button>
                             <button name="Pan Right" type="button" style="font-size: 30px; font-weight: bolder;"
                                 class="btn btn-outline-primary py-3"
                                 onclick="PublishMessage('Pan/5', 'geo')">&#8680;</button>
                         </div>
                         <div class="btn-group">
-                            <button type="button" disabled class="btn btn-outline-secondary py-3"
-                               ></button>
+                            <button type="button" disabled class="btn btn-outline-secondary py-3"></button>
                             <button name="Tilt Down" type="button" style="font-size: 30px; font-weight: bolder;"
                                 class="btn btn-outline-primary py-3"
                                 onclick="PublishMessage('Tilt/-5', 'geo')">&#8681;</button>
-                            <button name="disabled" type="button" disabled class="btn btn-outline-secondary py-3"
-                                ></button>
+                            <button name="disabled" type="button" disabled
+                                class="btn btn-outline-secondary py-3"></button>
                         </div>
                     </div>
                 </div>
