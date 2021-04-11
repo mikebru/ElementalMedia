@@ -39,9 +39,9 @@
 
                 <div class="col-3 border rounded" style="vertical-align: middle;">
 
-                        <iframe title="Chat View" src="https://obs.ninja/?room=frank_group5&roombitrate=500"
-                            allow="camera;microphone">
-                        </iframe>
+                    <iframe title="Chat View" src="https://obs.ninja/?room=frank_group5&roombitrate=500"
+                        allow="camera;microphone">
+                    </iframe>
 
                 </div>
 
@@ -58,8 +58,8 @@
                         <div class="d-table-cell" style="text-align: center;">
                             <label for="Intensity"> Energy</label>
                             <div id="Intensity"> 0.5 </div>
-                            <input label="Intensity" type="range" min="0.0" max="1.0" value="0.5" class="vertical" step=".01"
-                                orient="vertical" id="sliderIntensity">
+                            <input label="Intensity" type="range" min="0.0" max="1.0" value="0.5" class="vertical"
+                                step=".01" orient="vertical" id="sliderIntensity">
                         </div>
 
                         <div class="d-table-cell" style="text-align: center;">
@@ -101,34 +101,45 @@
 
                     <div class="col-10 btn-group-vertical ml-3 mt-3 " style="align-content: center;" role="group">
                         <div class="btn-group">
-                            <button name="disabled" type="button" disabled class="btn btn-outline-secondary py-3"
-                               ></button>
+                            <button name="disabled" type="button" disabled
+                                class="btn btn-outline-secondary py-3"></button>
                             <button name="Tilt Up" type="button" style="font-size: 30px; font-weight: bolder;"
                                 class="btn btn-outline-primary py-3" onclick="PublishMessage('Tilt/5', 'dome')"> &#8679;
                             </button>
-                            <button name="disabled" type="button" disabled class="btn btn-outline-secondary py-3"
-                                ></button>
+                            <button name="disabled" type="button" disabled
+                                class="btn btn-outline-secondary py-3"></button>
                         </div>
                         <div class="btn-group">
                             <button name="Pan Left" type="button" style="font-size: 30px; font-weight: bolder;"
                                 class="btn btn-outline-primary py-3"
                                 onclick="PublishMessage('Pan/-5', 'dome')">&#8678;</button>
-                            <button name="disabled" type="button" disabled class="btn btn-outline-secondary py-3"
-                                ></button>
+                            <button name="disabled" type="button" disabled
+                                class="btn btn-outline-secondary py-3"></button>
                             <button name="Pan Right" type="button" style="font-size: 30px; font-weight: bolder;"
                                 class="btn btn-outline-primary py-3"
                                 onclick="PublishMessage('Pan/5', 'dome')">&#8680;</button>
                         </div>
                         <div class="btn-group">
-                            <button type="button" disabled class="btn btn-outline-secondary py-3"
-                               ></button>
+                            <button type="button" disabled class="btn btn-outline-secondary py-3"></button>
                             <button name="Tilt Down" type="button" style="font-size: 30px; font-weight: bolder;"
                                 class="btn btn-outline-primary py-3"
                                 onclick="PublishMessage('Tilt/-5', 'dome')">&#8681;</button>
-                            <button name="disabled" type="button" disabled class="btn btn-outline-secondary py-3"
-                                ></button>
+                            <button name="disabled" type="button" disabled
+                                class="btn btn-outline-secondary py-3"></button>
                         </div>
                     </div>
+
+                </div>
+            </div>
+
+            <!--talk space title-->
+            <div class="row justify-content-center" style="padding-top: 2.5%;">
+                <div class="col-12 " style="vertical-align: middle;">
+                    <h5 style="text-align:center">Play with the slider controls to change the lighting, soundscape, and
+                        digital content.</h5> <br> <br>
+
+                    <h5 style="text-align:center">Camera controls can adjust viewing angle. Controls may periodically
+                        stop working. We apologize! </h5> <br> <br>
 
                 </div>
             </div>
