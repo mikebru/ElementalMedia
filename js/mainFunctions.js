@@ -65,7 +65,7 @@ function ConnectMessage(Topic, Message) {
 
     console.log(Topic);
 
-    setTimeout(() => {PublishMessage(Message, Topic);}, 500);
+    setTimeout(() => {PublishMessage(Message, Topic);}, 1500);
 
 }
 
